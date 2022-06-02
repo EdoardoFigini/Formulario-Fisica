@@ -1,0 +1,133 @@
+\section{Dinamica di sistemi di oggetti}
+
+\subsection{Equazioni cardinali della dinamica dei sistemi}
+
+\begin{equation}
+    \boxed{\vec{R}^{(e)} = \frac{d\vec{Q}}{dt}}
+\end{equation}
+\begin{equation}
+    \boxed{\frac{d\vec{L}_{TOT}}{dt} = \vec{M}_{TOT}{^{(e)}}}
+\end{equation}
+
+\subsection{Urti - fenomeni d'urto tra due oggetti}
+$\vec{Q}$ è costante durante l'urto
+\subsubsection{Tipologie di urti}
+\begin{itemize}
+    \item   \textbf{Urti elastici} \\
+            $K_{TOT}$ si conserva:
+            \begin{equation*}
+                \frac{1}{2}m_1v_1^{\tiny{(-)}^2} + 
+                \frac{1}{2}m_2v_2^{\tiny{(-)}^2} = 
+                \frac{1}{2}m_1v_1^{\tiny{(+)}^2} + 
+                \frac{1}{2}m_2v_2^{\tiny{(+)}^2} 
+            \end{equation*}
+            $\to$ risolvibile solo in una dimensione
+    \item   \textbf{Urti anleastici}
+    
+            \begin{equation*}
+                K_{TOT}^{\tiny{(-)}} \neq K_{TOT}^{\tiny{(+)}}
+            \end{equation*}
+            $\to$ energia viene dispersa
+    \item   \textbf{Urti perfettamente anelastici} \\
+            I due oggetti si fondono in uno solo
+            \begin{equation*}
+                V^{\tiny{(+)}} = \frac{m_1v_1^{\tiny{(-)}} + m_2v_2^{\tiny{(-)}}}{m_1 + m_2}
+            \end{equation*}
+\end{itemize}
+
+
+\subsection{Centro di massa}
+La posizione del centro di massa è data dalla media pesata delle posizioni di ogni punto rispetto alla massa:
+\begin{equation}
+    \vec{r}_{\tiny{CM}} = \frac{\sum_{i=1}^N m_i \vec{r_i}}{\sum_{i=1}^N m_i}
+\end{equation}
+
+chiamando $\sum_{i=1}^N m_i$ $M$:
+\begin{equation}
+    \begin{cases}
+        \vec{Q}=M\frac{d\vec{r}_{CM}}{dt} \\
+        \vec{V}_{\tiny{CM}}=\frac{d\vec{r}_{CM}}{dt}
+    \end{cases}
+    \label{q e v}
+\end{equation}
+\begin{equation}
+    \begin{cases}
+        \frac{d\vec{Q}}{dt}=M\frac{d\vec{V}_{CM}}{dt} \\
+        \vec{a}_{\tiny{CM}}=\frac{d^2\vec{r}_{CM}}{dt^2}
+    \end{cases} 
+    \label{dq e a}
+\end{equation}
+
+Ogni corpo può essere quindi studiato nel suo Centro di Massa, infatti da \eqref{q e v} e \eqref{dq e a}:
+\begin{equation}
+    \boxed{\vec{Q} = M\vec{V}_{\tiny{CM}}}
+\end{equation}
+\begin{equation}
+    \boxed{\vec{R}^{(e)} = M\vec{a}_{\tiny{CM}}}
+\end{equation}
+
+Per un sistema isolato:
+\begin{itemize}
+    \item $\vec{R}^{(e)} = 0$
+    \item $\vec{v}_{\tiny{CM}}$ costante
+    \item $\vec{a}_{\tiny{CM}}$ costante
+\end{itemize}
+
+\subsection{Teoremi di König}
+\begin{equation}
+    \boxed{\vec{L}_{TOT_{(O)}} = \vec{r}_{CM} \times M \vec{v}_{CM} + \vec{L}_{TOT_{CM}}}
+    \label{konig1}
+\end{equation}
+\vspace{\baselineskip}
+\begin{equation*}
+    K_{TOT} = \frac{1}{2}M_{TOT} \vec{V}_{\tiny{CM}}{^2} + \sum_{i=1}^N \frac{1}{2} m_i v_i{'}^2 
+\end{equation*}
+\begin{equation}
+    \boxed{K_{TOT} = \frac{1}{2}M_{TOT} \vec{V}_{\tiny{CM}}{^2} + K_{TOT}{'}}
+\end{equation}
+
+
+\subsection{Lavoro ed Energia}
+
+\begin{equation*}
+    \Delta K_{TOT} = \work^{(i)}_{{i} \to {f}} + \work^{(e)}_{{i} \to {f}}
+\end{equation*}
+
+$V \to$ energia potenziale interna al sistema 
+
+\begin{equation*}
+    \work^{(i)}_{{i} \to {f}} = \work^{(inc)}_{{i} \to f} - \Delta V^{(i)}
+\end{equation*}
+
+\begin{equation*}
+    \work^{(e)}_{{i} \to {f}} = \work^{(enc)}_{{i} \to f} - \Delta V^{(e)}
+\end{equation*}
+\vspace{\baselineskip}
+\begin{equation*}
+    E_m = K_{TOT} + V^{(i)} + V^{(e)}
+\end{equation*}
+
+\begin{equation*}
+    \Delta E_m = \work^{(inc)}_{{i} \to {f}} + \work^{(enc)}_{{i} \to {f}}
+\end{equation*}
+
+
+In assenza di forze non conservative
+\begin{equation*}
+    \Delta E_m = 0
+\end{equation*}
+
+\vspace{\baselineskip}
+
+\begin{equation*}
+    K_{TOT} = K_{CM} + K_{TOT}{'}
+\end{equation*}
+
+\begin{equation*}
+    K_{CM} + K_{TOT}{'} + \Delta V^{(i)} = \work^{(e)}_{i \to f}
+\end{equation*}
+
+Introducendo l'energia interna del sistema $U=K_{TOT}{'} + \Delta V^{(i)}$
+\begin{equation}
+    \Delta K_{CM} + \Delta U = \work^{(e)}_{i \to f}
+\end{equation}

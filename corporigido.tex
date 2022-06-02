@@ -1,0 +1,135 @@
+\section{Sistemi Rigidi (Corpo Rigido)}
+La distanza tra due oggetti puntiformni qualsiasi del sistema rimane costante nel tempo
+
+\begin{equation*}
+    \vec{v} = \vec{V_{(O')}} + \omega \times (\vec{r} - \vec{R_{(O')}})
+\end{equation*}
+
+\begin{equation}
+    \vec{v_P} = \vec{V}_{CM} + \omega \times (\vec{r_P} - \vec{r}_ {CM})
+\end{equation}
+
+\begin{itemize}
+    \item   Se $O'$ è in quiete rispetto a O
+            \begin{equation*}
+                \vec{V}_{(O')} = 0
+            \end{equation*}
+            \begin{equation}
+                \frac{d\vec{L}_{TOT_{(O')}}}{dt} = \vec{M}_{(O')}^{(e)}
+            \end{equation}
+    \item   Se $O' \equiv CM$  
+            \begin{equation*}
+                \vec{V}_{(O')} = \vec{V}_{CM} \;\; \to \;\; \vec{V}_{(O')} \times M \vec{V}_{CM} = 0
+            \end{equation*}
+            \begin{equation*}
+                \frac{d\vec{L}_{TOT_{CM}}}{dt} = \vec{M}_{CM}^{(e)}
+            \end{equation*}
+            
+            \begin{equation*}
+                \vec{L}_{TOT_{CM}} = \vec{L}_{TOT_{(O')}} - \vec{r}_{CM} \times M \vec{v}_{CM}
+            \end{equation*}
+            \begin{equation}
+                \vec{L}_{TOT_{(O)}} = \vec{r}_{CM} \times M \vec{v}_{CM} + \vec{L}_{TOT_{CM}}
+            \end{equation}
+            I teorema di König \eqref{konig1}
+\end{itemize}
+
+\subsection{Momento di Inerzia}
+Chiamando $r_i$ la distanza del punto $m_i$ dall'asse di rotazione e $\rho$ la densità:
+\begin{equation}
+    I = \sum_{i=1}^{N} m_i r_i^2
+    \label{inerzia}
+\end{equation}
+\begin{equation}
+    \rho(P) = \frac{dm}{dV}
+    \label{densita}
+\end{equation}
+
+Da \eqref{inerzia} e \eqref{densita}:
+\begin{equation*}
+    I = \lim_{\Delta V \to 0} \sum_{i=1}^{N} \Delta m_i r_i^2
+\end{equation*}
+\begin{equation}
+    \boxed{I = \iiint r^2 \rho dV} 
+\end{equation}
+
+\subsubsection{Teorema di Huygens-Steiner}
+Per trovare $I$ su un asse parallelo:
+\begin{equation}
+    \boxed{I = T_{CM} + M d^2}
+    \label{teoHS}
+\end{equation}
+dove $d$ è la distanza tra i due assi
+
+
+\subsection{Sistemi rigidi in moto}
+\subsubsection{Moto di pura traslazione}
+\begin{equation*}
+    \vec{Q} = M \vec{V}_{CM}
+\end{equation*}
+\begin{equation}
+    \vec{L}_{TOT_{(O)}} = \vec{r}_{CM} \times \vec{Q}
+\end{equation}
+\subsubsection{Moto di pura rotazione}
+$\vec{r_i}$ scomposto in componenti: 
+\begin{itemize}
+    \item $z_i \vec{u_z}$ lungo asse $z$
+    \item $\rho_i$ perpendicolarmente a $z$
+\end{itemize}
+\begin{equation}
+    \vec{L}_{TOT_{(O)}} = I \vec{\omega} - \sum_{i=1}^{N} m_i z_i \omega \vec{\rho_i}
+\end{equation}
+Se asse di rotazione è anche asse di simmetria:
+\begin{equation}
+    \boxed{\vec{L}_{TOT_{(O)}} = I \vec{\omega}}
+\end{equation}
+
+considerata $\vec{M_z}$ la proiezione di $\vec{M}_{(O)}^{(e)}$ lungo $z$:
+\begin{equation}
+        \boxed{\vec{M}_z^{(e)} = I \vec{\alpha}}
+\end{equation}
+
+\subsubsection{Moto di rotolamento}
+Moto studiato nel punto di contatto del sistema con il suolo $Q$, chiamato \emph{centro di istantanea rotazione}
+
+\begin{equation}
+    \vec{v} = \vec{\omega} \times \vec{r}
+\end{equation}
+
+\begin{equation}
+    |\vec{v}_{CM}| =\omega R
+    \label{velocitarotolamento}
+\end{equation}
+
+da \eqref{velocitarotolamento}:
+
+\begin{equation}
+    |\vec{Q}| = M R \omega
+\end{equation}
+
+\subsection{Statica di corpi rigidi}
+Condizioni necessarie per la quiete:
+
+\begin{equation*}
+    R^{(e)} = 0
+\end{equation*}
+
+\begin{equation*}
+    M^{(e)}_{TOT_{(O')}}= 0
+\end{equation*}
+
+\subsection{Energia Cinetica e Lavoro delle Forze esterne}
+
+\begin{equation}
+    \boxed{K_{TOT} = \frac{1}{2} M \vec{v}_{CM}{^2} + \frac{1}{2} I \omega^2}
+\end{equation}
+
+\vspace{\baselineskip}
+
+\begin{equation*}
+    \work_{i \to f}^{(e)} = \underset{\gamma_{CM}}{\int_{A_{CM}}^{B_{CM}}}\vec{R}^{(e)} d\vec{r}_{CM} + \int_{\theta_{B}}^{\theta_{A}}\vec{M}_z^{(e)} d\theta = \Delta K_{TOT}
+\end{equation*}
+
+\begin{equation}
+    \boxed{\work_{i \to f}^{(e)} = \Delta K_{CM} + \Delta K_{ROT} = \Delta K_{TOT}}
+\end{equation}

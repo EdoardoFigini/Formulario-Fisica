@@ -14,16 +14,14 @@
         ]
         
         \addplot [
-            ultra thick,
             domain= .1:5, 
             samples=100, 
             color = blue,
         ]
-        {pow(x, -(3/2))};
+        {pow(x, -(5/3))};
         \addlegendentry{Adiabatica}
         
         \addplot [
-            ultra thick,
             domain= 0:5, 
             samples=100, 
             color = red,
@@ -33,7 +31,6 @@
         
         
         \addplot [
-            ultra thick,
             domain= 0:5, 
             samples=100, 
             color = green,
@@ -42,7 +39,6 @@
         \addlegendentry{Isobara}
         
         \addplot[
-            ultra thick, 
             samples=1, 
             smooth,
             domain=0:1,
